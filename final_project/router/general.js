@@ -68,6 +68,7 @@ public_users.get('/review/:isbn', function (req, res) {
 
 public_users.post("/register", (req, res) => {
     const { username, password } = req.body;
+    console.log(username);
   
     if (!username || !password) {
       return res.status(400).json({ message: "Username and password are required" });
